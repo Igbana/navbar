@@ -1,0 +1,52 @@
+<NavScreen>:
+    MDCard:
+        size_hint: None, None
+        size: '230dp','50dp'
+        pos_hint: {'center_x':0.5, 'center_y':0.5}
+        radius: [50]
+        MDRelativeLayout:
+            pos: self.pos
+            MDLabel:
+                id: dot
+                text: "."
+                font_size: "50sp"
+                color: 1,0,1,1
+                pos: ico0.center[0]-12, ico0.center[1]-54
+                size_hint: None, None
+            MDBoxLayout:
+                AnchorLayout:
+                    anchor_x: 'center'
+                    anchor_y: 'center'
+                    MDIconButton:
+                        id: ico0
+                        icon: 'cog'
+                        theme_text_color: "Custom"
+                        text_color: 1,0,1,1
+                        on_release: root.selected("ico0")
+                AnchorLayout:
+                    anchor_x: 'center'
+                    anchor_y: 'center'
+                    MDIconButton:
+                        id: ico1
+                        icon: 'bell'
+                        theme_text_color: "Custom"
+                        text_color: 0.7,0.7,0.7,1
+                        on_release: root.selected("ico1")
+                AnchorLayout:
+                    anchor_x: 'center'
+                    anchor_y: 'center'
+                    MDIconButton:
+                        id: ico2
+                        icon: 'email'
+                        theme_text_color: "Custom"
+                        text_color: 0.7,0.7,0.7,1
+                        on_release: root.selected("ico2")
+                AnchorLayout:
+                    anchor_x: 'center'
+                    anchor_y: 'center'
+                    MDIconButton:
+                        id: ico3
+                        icon: 'account'
+                        theme_text_color: "Custom"
+                        text_color: 0.7,0.7,0.7,1
+                        on_release: root.selected("ico3")
